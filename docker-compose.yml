@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   db:
     image: mysql:8.0
@@ -28,8 +29,10 @@ services:
     restart: always
     volumes:
       - .:/var/www/html
-    networks:
-      - default
+    entrypoint:
+      - sh
+      - -c
+      - "docker-php-ext-install mysqli && docker-php-ext-enable mysqli && php-fpm"
 
   web:
     image: nginx:alpine
@@ -43,7 +46,3 @@ services:
     depends_on:
       - php
       - db
-
-networks:
-  default:
-    driver: bridge
