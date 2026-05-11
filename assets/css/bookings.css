@@ -1,0 +1,243 @@
+/* assets/css/bookings.css */
+
+.bookings-container {
+    padding: 40px 0;
+}
+
+.bookings-container h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.no-bookings {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.no-bookings h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.no-bookings p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.no-bookings .btn {
+    background-color: #667eea;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.bookings-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.booking-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #667eea;
+}
+
+.booking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.booking-info {
+    flex: 1;
+}
+
+.booking-ref {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.booking-date {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.booking-status {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.booking-status.confirmed {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.booking-status.cancelled {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.booking-status.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.booking-actions .btn-danger {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.booking-actions .btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.flight-info {
+    margin-bottom: 20px;
+}
+
+.flight-route {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.departure, .arrival {
+    text-align: center;
+}
+
+.city {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.airport {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.time {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.date {
+    color: #666;
+    font-size: 12px;
+}
+
+.flight-duration {
+    text-align: center;
+}
+
+.duration {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.airline {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.flight-number {
+    font-size: 12px;
+    color: #999;
+}
+
+.booking-details {
+    display: flex;
+    gap: 30px;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.booking-details .detail {
+    font-size: 14px;
+}
+
+.booking-details .detail strong {
+    color: #333;
+    margin-right: 5px;
+}
+
+.passenger-info {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+.passenger-info strong {
+    color: #667eea;
+    margin-bottom: 5px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .booking-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .flight-route {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .booking-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .departure, .arrival {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+    
+    .departure .city,
+    .arrival .city {
+        flex: 1;
+    }
+    
+    .departure .time,
+    .arrival .time {
+        margin-left: 10px;
+    }
+}
