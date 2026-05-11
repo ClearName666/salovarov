@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: salovarov_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: asd1kjer343jfd8fd
+      MYSQL_DATABASE: app_db
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: salovarov_pma
+    restart: always
+    ports:
+      - "3000:80"
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: asd1kjer343jfd8fd
+    depends_on:
+      - db
+
+  web:
+    image: nginx:alpine
+    container_name: salovarov_nginx
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./project:/usr/share/nginx/html
+    depends_on:
+      - db
