@@ -2,7 +2,7 @@
 // В Docker имя хоста — это название сервиса из docker-compose.yml
 define('DB_HOST', 'db'); 
 define('DB_USER', 'root');
-define('DB_PASS', 'admin'); 
+define('DB_PASS', 'Up8#kL9_mN2!zQ'); 
 define('DB_NAME', 'ex_db'); // Убедись, что имя базы совпадает с тем, что в docker-compose
 
 function getDBConnection() {
